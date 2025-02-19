@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Интернет-магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Интернет-магазин</h1>
+        </div>
+        <div class="header-icons">
+            <a href="index.html" class="home-icon"><i class="fas fa-home"></i></a>
+            <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="notifications" style="display: none;"></div>
+
+    <main>
+        <section class="orders-section">
+            <h2>Заказы</h2>
+            <div class="orders-table-wrapper">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Дата и время</th>
+                            <th>Состав заказа</th>
+                            <th>Стоимость</th>
+                            <th>Дата доставки</th>
+                            <th>Время доставки</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="viewOrderModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Просмотр заказа</h2>
+            <div class="order-details">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="editOrderModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Редактирование заказа</h2>
+            <form id="editOrderForm">
+                <label for="edit-name">Имя</label>
+                <input type="text" name="fullName" />
+                <label for="edit-email">Email</label>
+                <input type="email" name="email" />
+                <label for="edit-phone">Телефон</label>
+                <input type="tel" name="phone" />
+                <label for="edit-address">Адрес</label>
+                <input type="text" name="address" />
+                <label for="edit-delivery-date">Дата доставки</label>
+                <input type="date" name="deliveryDate" />
+                <label for="edit-delivery-time">Время доставки</label>
+                <select name="deliveryTime" required>
+                    <option value="10-12">10:00 - 12:00</option>
+                    <option value="12-14">12:00 - 14:00</option>
+                    <option value="14-16">14:00 - 16:00</option>
+                    <option value="16-18">16:00 - 18:00</option>
+                    <option value="18-20">18:00 - 20:00</option>
+                </select>
+                <textarea name="comment"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteOrderModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Удаление заказа</h2>
+            <p>Вы действительно хотите удалить заказ?</p>
+            <div class="modal-actions">
+                <button class="confirm-delete">Удалить</button>
+                <button class="cancel-delete">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Интернет-магазин</h3>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:andrey@kulenko.su">andrey@kulenko.su</a></p>
+                <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>Адрес: <a href="https://maps.app.goo.gl/PYQop6jYiwBYs6SWA">ул. Прянишникова, 2А</a></p>
+            </div>
+            <p>&copy; 2025 Интернет-магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/profile.js"></script>
+</body>
+</html>

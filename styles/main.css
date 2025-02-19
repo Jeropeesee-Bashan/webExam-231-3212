@@ -1,0 +1,250 @@
+main {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+aside {
+    width: 250px;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-form h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.filter-form select,
+.filter-form input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.price-range {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.price-range input {
+    width: 50%;
+}
+
+.filter-form label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-form input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.filter-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f5f5f5;
+}
+
+.suggestion-item strong {
+    color: #007bff;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .product-card {
+        min-width: unset;
+    }
+
+    .product-card img {
+        height: 120px;
+    }
+
+    .product-info h3 {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    .category {
+        font-size: 0.8rem;
+    }
+
+    .price-block {
+        font-size: 0.9rem;
+    }
+
+    .discount-price {
+        font-size: 0.9rem;
+    }
+
+    .original-price {
+        font-size: 0.8rem;
+    }
+
+    .filter-form {
+        gap: 0.5rem;
+    }
+
+    .filter-form h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .price-range {
+        flex-direction: row;
+    }
+
+    .price-range input {
+        font-size: 0.9rem;
+    }
+
+    .catalog-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .catalog-header h2 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .sort-select {
+        width: 100%;
+    }
+
+    .search-suggestions {
+        max-height: 200px;
+    }
+
+    .suggestion-item {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .no-results {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1rem 0.5rem;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Интернет-магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Интернет-магазин</h1>
+        </div>
+        <div class="header-icons">
+            <a href="index.html" class="catalog-icon"><i class="fas fa-home"></i></a>
+            <a href="profile.html" class="profile-icon"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <div class="notifications" style="display: none;"></div>
+
+    <main>
+        <section class="cart-section">
+            <h2>Корзина</h2>
+            <div class="cart-items">
+            </div>
+            <div class="cart-empty" style="display: none;">
+                <p>Корзина пуста. <a href="index.html">Перейдите в каталог</a>, чтобы добавить товары.</p>
+            </div>
+        </section>
+
+        <section class="order-form-section">
+            <h2>Оформление заказа</h2>
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="name">Имя*</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон*</label>
+                    <input type="text" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="newsletter">
+                        Согласие на получение рассылки
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адрес доставки*</label>
+                    <input type="text" id="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-date">Дата доставки*</label>
+                    <input type="date" id="delivery-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-time">Временной интервал доставки*</label>
+                    <select id="delivery-time" required>
+                        <option value="">Выберите время</option>
+                        <option value="8">08:00 - 12:00</option>
+                        <option value="12">12:00 - 14:00</option>
+                        <option value="14">14:00 - 18:00</option>
+                        <option value="18">18:00 - 22:00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Комментарий к заказу</label>
+                    <textarea id="comment" rows="4"></textarea>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Итого: <span class="total-price">0 ₽</span></h3>
+                </div>
+
+                <button type="submit" class="submit-order">Оформить заказ</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Интернет-магазин</h3>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:andrey@kulenko.su">andrey@kulenko.su</a></p>
+                <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>Адрес: <a href="https://maps.app.goo.gl/PYQop6jYiwBYs6SWA">ул. Прянишникова, 2А</a></p>
+            </div>
+            <p>&copy; 2025 Интернет-магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Интернет-магазин</h1>
+        </div>
+        <div class="search-bar">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Поиск товаров..." 
+                class="search-input"
+            >
+            <button id="search-button" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-icons">
+            <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="profile.html" class="profile-icon"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <div class="notifications"></div>
+
+    <main>
+        <aside>
+            <form class="filter-form">
+                <h3>Фильтры</h3>
+                <select name="category" id="category-filter">
+                    <option value="">Все категории</option>
+                </select>
+                
+                <div class="price-range">
+                    <input type="number" name="min-price" placeholder="Цена от">
+                    <input type="number" name="max-price" placeholder="Цена до">
+                </div>
+                
+                <label>
+                    <input type="checkbox" name="has-discount" value="true">
+                    Только со скидкой
+                </label>
+                
+                <button type="submit">Применить</button>
+            </form>
+        </aside>
+
+        <section class="catalog">
+            <div class="catalog-header">
+                <h2>Каталог</h2>
+                <select class="sort-select">
+                    <option value="popular">По популярности</option>
+                    <option value="price-asc">По возрастанию цены</option>
+                    <option value="price-desc">По убыванию цены</option>
+                </select>
+            </div>
+
+            <div class="products-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Интернет-магазин</h3>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:andrey@kulenko.su">andrey@kulenko.su</a></p>
+                <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>Адрес: <a href="https://maps.app.goo.gl/PYQop6jYiwBYs6SWA">ул. Прянишникова, 2А</a></p>
+            </div>
+            <p>&copy; 2025 Интернет-магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html> 
