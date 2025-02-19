@@ -97,16 +97,7 @@ class API {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    full_name: orderData.name,
-                    email: orderData.email,
-                    phone: orderData.phone,
-                    delivery_address: orderData.address,
-                    delivery_date: orderData.deliveryDate,
-                    delivery_interval: orderData.deliveryTime,
-                    comment: orderData.comment,
-                    subscribe: orderData.subscribe || false
-                })
+                body: JSON.stringify(orderData)
             });
             if (!response.ok) {
                 const error = await response.json();
